@@ -1,0 +1,9 @@
+</tr>
+
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.fetch(:director, :name) %></td>
+      <td><%= movie.release_year %></td>
+    </tr>
+  <% end %>

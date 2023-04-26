@@ -1,0 +1,50 @@
+
+<h1>List of all movies</h1>
+
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Title
+    </th>
+
+    <th>
+      Release Year
+    </th>
+
+    <th>
+      Director
+    </th>
+  </tr>
+
+  <% @movies.each do |movie| %>
+    <tr>
+      <td>
+        <%= movie.id %>
+      </td>
+
+      <td>
+        <%= image_tag(movie.image) %>
+      </td>
+
+      <td>
+        <%= movie.title %>
+      </td>
+
+      <td>
+        <%= movie.year %>
+      </td>
+
+      <td>
+        <%= movie.directors.name if movie.directors %>
+      </td>
+    </tr>
+  <% end %>
+</table>

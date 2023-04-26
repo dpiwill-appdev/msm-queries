@@ -1,0 +1,4 @@
+<h1>Directors#youngest</h1>
+ <p>Name: <%= @youngest_director.name %></p>
+<p>Date of Birth: <%= @youngest_director.dob %></p>
+<p>Date of Birth: <%= @youngest_director.dig(:dob)&.strftime("%B %d, %Y") %></p>
