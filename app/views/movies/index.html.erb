@@ -1,50 +1,23 @@
-
 <h1>List of all movies</h1>
 
 <table border="1">
   <tr>
-    <th>
-      ID
-    </th>
-
-    <th>
-      Image
-    </th>
-
-    <th>
-      Title
-    </th>
-
-    <th>
-      Release Year
-    </th>
-
-    <th>
-      Director
-    </th>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+    <th> </th>
   </tr>
 
   <% @movies.each do |movie| %>
     <tr>
-      <td>
-        <%= movie.id %>
-      </td>
-
-      <td>
-        <%= image_tag(movie.image) %>
-      </td>
-
-      <td>
-        <%= movie.title %>
-      </td>
-
-      <td>
-        <%= movie.year %>
-      </td>
-
-      <td>
-        <%= movie.directors.name if movie.directors %>
-      </td>
+      <td><%= movie.id %></td>
+      <td> <%= image_tag(movie.image, style: "width:250px;") %></td>
+      <td><%= movie.title %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.director.name if movie.director.present? %></td>
+      <td><a href="<%= movies_path(movie) %>">View Movie</a></td>
     </tr>
   <% end %>
 </table>

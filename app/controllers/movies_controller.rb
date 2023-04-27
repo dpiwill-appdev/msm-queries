@@ -7,4 +7,11 @@ class MoviesController < ApplicationController
     year = self[:year]
     year.year if year
   end
+  def show
+    @movie = Movie.where(params[:id])
+    @director = @movie.director
+    render 'movies/show.html.erb'
+  end
+  
+
 end

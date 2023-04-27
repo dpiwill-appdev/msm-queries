@@ -1,41 +1,48 @@
-<th>
-    Image
-  </th>
-
-  <th>
-    Name
-  </th>
-
-  <th>
-    Dob
-  </th>
-
-  <th>
-  </th>
-</tr>
-
-<% @actors.each do |actor| %>
+<table border="1">
   <tr>
-    <td>
-      <%= actor.id %>
-    </td>
+    <th>
+      ID
+    </th>
 
-    <td>
-      <%= image_tag(actor.image, style: 'width:250px;') %>
-    </td>
+    <th>
+      Image
+    </th>
 
-    <td>
-      <%= actor.name %>
-    </td>
+    <th>
+      Name
+    </th>
 
-    <td>
-      <%= actor.dob %>
-    </td>
+    <th>
+      Dob
+    </th>
 
-    <td>
-      <a href="/actors/<%= actor.id %>">
-        Show details
-      </a>
-    </td>
+    <th>
+    </th>
   </tr>
-<% end %>
+
+  <% @actors.each do |actor| %>
+    <tr>
+      <td>
+        <%= actor.id %>
+      </td>
+
+      <td>
+        
+      </td>
+
+      <td>
+        <%= actor.name %>
+      </td>
+
+      <td>
+        <%= actor.dob %>
+      </td>
+
+      <td>
+        <a href="/actors/<%= actor.id %>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>

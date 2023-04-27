@@ -11,7 +11,5 @@
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
-
-  @directors = Director.all
-  
+  has_many :movies, foreign_key: :director_id
 end
