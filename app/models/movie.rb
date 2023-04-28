@@ -13,5 +13,7 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
-  belongs_to :director
+  def director
+    Director.find_by({ :id => self.director_id })
+  end
 end

@@ -10,5 +10,5 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
-resources :directors
+
 end

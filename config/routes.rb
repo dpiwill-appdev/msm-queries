@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get("/", { :controller => "application", :action => "homepage" })
-  resources :directors
   get "/directors/youngest", { :controller => "directors", :action => "youngest" }
   get "/directors/eldest", { :controller => "directors", :action => "eldest" }
   get "/movies", { :controller => "movies", :action => "index" }
@@ -8,5 +7,7 @@ Rails.application.routes.draw do
   get "/actors", { :controller => "actors", :action => "index" }
   get "/actors/:id", { :controller => "actors", :action => "show" }
   
-  get "/movies/:id", { :controller => "movies", :action => "show" }, as: "movies_path"
+  
+    
+  
 end

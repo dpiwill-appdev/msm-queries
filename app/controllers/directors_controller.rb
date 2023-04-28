@@ -8,5 +8,6 @@ class DirectorsController < ApplicationController
     @director = Director.find(params[:id])
     render 'directors/show.html.erb'
   end
+
 end
  

@@ -11,9 +11,8 @@
 #  updated_at :datetime         not null
 #
 class Actor < ApplicationRecord
-  validates :name, presence: true
-  validates :dob, presence: true
-  validates :bio, presence: true
+  
 
- 
+  
+  
 end

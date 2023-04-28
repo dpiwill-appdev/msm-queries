@@ -1,3 +1,4 @@
+
 <h1>List of all movies</h1>
 
 <table border="1">
@@ -12,12 +13,29 @@
 
   <% @movies.each do |movie| %>
     <tr>
-      <td><%= movie.id %></td>
-      <td> <%= image_tag(movie.image, style: "width:250px;") %></td>
-      <td><%= movie.title %></td>
-      <td><%= movie.year %></td>
-      <td><%= movie.director.name if movie.director.present? %></td>
-      <td><a href="<%= movies_path(movie) %>">View Movie</a></td>
+      <td>
+        <%= movie.id %>
+      </td>
+
+      <td>
+         <img src="<%= movie.image %>" alt="">
+      </td>
+
+      <td>
+        <%= movie.title %>  
+      </td>
+
+      <td>
+        <%= movie.year %>
+      </td>
+
+      <td>
+        <%= movie.director.name %>
+      </td>
+
+      <td>
+        <a href="/movies/<%= movie.id %>">Show details</a>
+      </td>
     </tr>
   <% end %>
 </table>

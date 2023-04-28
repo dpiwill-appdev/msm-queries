@@ -1,11 +1,48 @@
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
 
-<h1>List of all directors</h1>
+    <th>
+      Image
+    </th>
 
-<ul>
+    <th>
+      Name
+    </th>
+
+    <th>
+      Dob
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
   <% @directors.each do |director| %>
-    <li>
-      <%= link_to "#{director.name} (DOB: #{director.dob})", director %>
-      <%= link_to "Show details", director %>
-    </li>
+    <tr>
+      <td>
+        <%= director.id %>
+      </td>
+
+      <td>
+         <img src="https://robohash.org/myrobot" alt="My Robot">
+      </td>
+
+      <td>
+        <%= director.name %>
+      </td>
+
+      <td>
+        <%= director.dob %>
+      </td>
+
+      <td>
+        <a href="/directors/<%= director.id %>">
+          Show details
+        </a>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>
